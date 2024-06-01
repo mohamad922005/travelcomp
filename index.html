@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Company</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        header {
+            background-color: #874caf;
+            width: 50%;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .tab {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 15px 25px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .tab:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Travel Company
+    </header>
+    <div class="container">
+        <div class="tab" onclick="openPDF('Lebanon')">Lebanon</div>
+        <div class="tab" onclick="openPDF('Bahrain')">Bahrain</div>
+        <div class="tab" onclick="openPDF('United_States')">United States</div>
+    </div>
+
+    <script>
+        function openPDF(country) {
+            const pdfLinks = {
+                'Lebanon': 'write the pdf link for Lebanon',
+                'Bahrain': 'write the pdf link for Bahrain',
+                'United_States': 'write the pdf link for United States'
+            };
+            const link = pdfLinks[country];
+            if (link) {
+                window.open(link, '_blank');
+            } else {
+                alert('PDF link not found for ' + country);
+            }
+        }
+    </script>
+</body>
+</html>
